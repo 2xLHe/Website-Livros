@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+     <title>Meu Website</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/cabecalho.css">
+    <link rel="stylesheet" href="css/loja.css">
+    <link rel="stylesheet" href="css/responsividade.css">
+</head>
+<body style="min-height: 300px;">
+
+  <div class="barra-acessibilidade">
+    <nav class="barra-acessibilidade-nav">
+            <a id="aumentar" class="botao-acessibilidade aumentar" onclick="aumentarTamanhos()" href="javascript:;">
+                <i class="fa fa-plus">Aumentar</i> 
+            </a>
+            <a id="diminuir" class="botao-acessibilidade diminuir" onclick="diminuirTamanhos()" href="javascript:;">
+                <i class="fa fa-minus">Diminuir</i>
+            </a>
+    </nav> 
+    <a id="altoContraste" class="botao-acessibilidade contraste" onclick="toggleAltoContraste()" href="javascript:;"">
+        <i class="fa fa-adjust">Alto Contraste</i>
+    </a>   
+  </div>
+
+  <nav class="nav-cabecalho">
+    <div class="nav-left">
+        <a class="logo" href="index.html">
+            <img class="logo" src="img\yipee-books-min2.png" alt="criatura do autismo escondida atrás de livros" style="cursor: pointer;">
+        </a>
+    </div>
+
+
+    <ul class="nav justify-content-center nav-center">
+        <li class="abas atual">
+            <a class=" texto nav-link" href="index.html">Meus Livros</a>
+        </li>
+        <li class="abas">
+            <a class=" texto nav-link" href="loja.html">Loja</a>
+        </li>
+        <li class="abas ">
+            <a class="texto nav-link" href="carrinho.html">Carrinho</a>
+        </li>
+        <li class="abas">
+            <a class="texto nav-link" href="perfil.html"> Perfil </a>
+        </li>
+    </ul>
+
+    </nav>  
+<div class="caixa-pesquisa">
+    <input class="pesquisa" type="text" placeholder="Pesquisar">
+    <img class="img-pesquisa" src="img/search.png" alt="Foto de uma lupa para pesquisa">
+</div>
+
+    <div class="books-grid">
+        <div class="container">
+            <div class="container-inside">
+              <div class="row">
+                  <!-- As imagens serão adicionadas aqui pelo script -->
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="rodape">
+        <p>Copyright &copy; 2022. Todos os direitos reservados.</p>
+    </footer>
+    
+
+
+
+      <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="js/fotos.js"></script>
+    <script src="js/acessibilidade.js"></script>
+
+</body>
+</html>

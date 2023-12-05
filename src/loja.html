@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+     <title>Meu Website</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/cabecalho.css">
+    <link rel="stylesheet" href="css/loja.css">
+    <link rel="stylesheet" href="css/responsividade.css">
+</head>
+
+<body>
+  <div class="barra-acessibilidade">
+    <nav class="barra-acessibilidade-nav">
+            <p id="aumentar" class="botao-acessibilidade aumentar" onclick="aumentarTamanhos()">
+                <i class="fa fa-plus">Aumentar</i> 
+            </p>
+            <p id="diminuir" class="botao-acessibilidade diminuir" onclick="diminuirTamanhos()">
+                <i class="fa fa-minus">Diminuir</i>
+            </p>
+    </nav> 
+
+    <div class="filler-bar"></div>
+
+    <p id="altoContraste" class="botao-acessibilidade contraste" onclick="toggleAltoContraste()">
+        <i class="fa fa-adjust">Alto contraste</i>
+    </p>   
+</div>
+
+<nav class="nav-cabecalho">
+  <div class="nav-left">
+    <a class="logo" href="index.html">
+        <img class="logo" src="img\yipee-books-min2.png" alt="criatura do autismo escondida atrás de livros" style="cursor: pointer;">
+    </a>
+</div>
+
+    <div class="nav-center">
+        <ul class="nav justify-content-center">
+          <li class="abas">
+            <a class=" texto nav-link" href="index.html">Meus Livros</a>
+          </li>
+          <li class="abas atual">
+              <a class=" texto nav-link" href="loja.html">Loja</a>
+          </li>
+            <li class="abas">
+                <a class="texto nav-link" href="carrinho.html">Carrinho</a>
+            </li>
+            <li class="abas">
+                <a class="texto nav-link" href="perfil.html"> Perfil </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class = "nav-right">  
+        <div class="caixa-pesquisa">
+            <input class="pesquisa" type="text" placeholder="Pesquisar">
+            <img class="img-pesquisa" src="img/search.png" alt="Foto de uma lupa para pesquisa">
+        </div>
+
+    </div>
+
+</nav>
+
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="img/slide1.png" alt="Primeiro slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="img/slide2.png" alt="Segundo slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="img/slide3.png" alt="Terceiro slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true" alt="Próximo"></span>
+          <span class="sr-only">Próximo</span>
+        </a>
+      </div>
+
+
+    <div class="books-grid">
+        <div class="container">
+            <div class="container-inside">
+                  <!-- As imagens serão adicionadas aqui pelo script -->
+              </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <footer class="rodape">
+      <p>Copyright &copy; 2022. Todos os direitos reservados.</p>
+    </footer>
+
+
+    
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="js/fotos.js"></script>
+    <script src="js/acessibilidade.js"></script>
+
+</body>
+</html>
