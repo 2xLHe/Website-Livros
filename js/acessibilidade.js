@@ -56,12 +56,18 @@ function diminuirTamanhos() {
 }
 
 
-// Variável para armazenar o estado atual do alto contraste
-let altoContrasteAtivado = false;
-
+document.getElementById('btn-alto-contraste').addEventListener('click', toggleAltoContraste);
 function toggleAltoContraste() {
+    document.documentElement.classList.toggle('high-contrast');
 
+    var abasElements = document.querySelectorAll('.abas *');
+    abasElements.forEach(function(element) {
+        element.style.setProperty('color', 'black');
+    });
+    document.querySelector('.atual').style.setProperty('color', 'white');   
 }
+
+
 
 
 // A função é chamada quando o botão é clicado
@@ -121,8 +127,6 @@ function decreaseFontSize() {
         downArrow.style.setProperty('color', 'gray');
     }
 }
-
-
 
 
 
