@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/carrinho.css">
     <link rel="stylesheet" href="css/perfil.css">
 </head>
-<body style="min-height: 500px;" >
+<body style="min-height: 500px;">
 
     <div class="barra-acessibilidade">
         <nav class="barra-acessibilidade-nav">
@@ -35,9 +35,6 @@
         </nav>
     </div>
     
- 
-    </div>
-    
     <nav class="nav-cabecalho">
         <div class="nav-left">
             <a class="logo" href="index.html">
@@ -56,46 +53,31 @@
                 <li class="abas">
                     <a class="texto nav-link" href="carrinho.html">Carrinho</a>
                 </li>
-                <li class="abas ">
-                    <a class="texto nav-link atual" href="perfil.html"> Perfil </a>
+                <li class="abas atual">
+                    <a class="texto nav-link" href="perfil.html"> Perfil </a>
                 </li>
             </ul>
         </div>
 
-        <a href="perfil.html">
-            <img class="miniatura-perfil" src="img/evangelionLuis.png" alt="Miniatura Perfil" style="cursor: pointer;">
-        </a>        
+        <img class="miniatura-perfil" src="img\evangelionLuis.png" alt="Miniatura Perfil" style="cursor: pointer;">
+    
     </nav>
 
-    <div class="perfil" >
-        <img class="foto-perfil" src="img/evangelionLuis.png" alt="Imagem de Perfil">
-        <picture class="nome-desc">
-            <p class="nome-perfil" style="color: var(--texto-color)">Cendro Tindriebo</p>            <p class="desc" id="desc1"></p>
-        </picture>
-    </div>
 
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        carregarTexto("txt/descricao.txt", 'desc1');});
-    </script>
+    <section>
+        <form method="get" action="menu.html">
+            <header><h1>Compra Finalizada!</h1></header>
+            <h3 style="font-weight: normal;">Obrigado</h3>
+        
+            <button type="submit" style="margin-top: 30vh;">Voltar ao menu</button>
+        
+          </form>
+    </section>
 
-    <p class="favoritos">Livros Favoritos</p> 
-    <nav class="livros-fav"> 
-        <a href="leitura.html">
-            <img class="foto-perfil" src="img/dragon.jpg" alt="Imagem de Perfil">
-            <p class="texto" style="justify-content: center;">Dragon Knights</p>
-        </a> 
-        <a href="leitura.html">
-            <img class="foto-perfil" src="img/amazing.jpg" alt="Imagem de Perfil">
-            <p class="texto" style="justify-content: center;">Amazing</p>
-        </a> 
-    </nav>
 
     <footer class="rodape">
-    <p>Copyright &copy; 2022. Todos os direitos reservados.</p>
-    </footer>
-
-
+        <p>Copyright &copy; 2022. Todos os direitos reservados.</p>
+        </footer>
 
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
@@ -111,7 +93,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="js/carrinho.js"></script>
-    <script src="js/fotos.js"></script>
     <script src="js/acessibilidade.js"></script>
 </body>
 </html>

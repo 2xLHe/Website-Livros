@@ -216,3 +216,14 @@ footer{
     border-radius: 50%;
     z-index: 100;
 }
+
+#sair{
+    position: absolute;
+    right: 0; 
+    color: var(--texto-color);
+    background: var(--select-color);
+    height: 5vh;
+    width: 5vw;
+    justify-content: center;
+    margin: 0 var(--margin);
+}

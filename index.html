@@ -11,7 +11,14 @@
     <link rel="stylesheet" href="css/carrinho.css">
     <link rel="stylesheet" href="css/perfil.css">
 </head>
-<body style="min-height: 500px;">
+<body style="min-height: 500px; color: var(--texto-color);">
+
+    <script>
+        window.addEventListener('load', function() {
+            localStorage.setItem('usuarioEstaLogado', 'false');
+        });
+    </script>
+
 
     <div class="barra-acessibilidade">
         <nav class="barra-acessibilidade-nav">
@@ -48,19 +55,19 @@
                     <a class=" texto nav-link" href="index.html">Meus Livros</a>
                 </li>
                 <li class="abas">
-                    <a class=" texto nav-link" href="loja.html">Loja</a>
+                    <a class=" texto nav-link" href="index.html">Loja</a>
                 </li>
                 <li class="abas">
-                    <a class="texto nav-link" href="carrinho.html">Carrinho</a>
+                    <a class="texto nav-link" href="index.html">Carrinho</a>
                 </li>
                 <li class="abas">
-                    <a class="texto nav-link" href="perfil.html"> Perfil </a>
+                    <a class="texto nav-link" href="index.html"> Perfil </a>
                 </li>
             </ul>
         </div>
 
-        <a href="perfil.html">
-            <img class="miniatura-perfil" src="img/evangelionLuis.png" alt="Miniatura Perfil" style="cursor: pointer;">
+        <a href="registro.html">
+            <p class="texto">Não tem uma conta?</p>
         </a>        
     </nav>
 
@@ -75,7 +82,21 @@
             <label for="password"> Senha: </label>
             <input type="password" autocomplete="current-password" name="password" id="password" placeholder="••••••••••••">
         
-            <button type="submit">Login</button>
+            <button type="submit" id="loginButton">Login</button>
+
+            <script>
+                document.getElementById('loginButton').addEventListener('click', function(e) {
+                    e.preventDefault(); // Impede que o formulário seja enviado imediatamente
+            
+                    // Substitua isso pela sua lógica de verificação de login
+                    const usuarioEstaLogado = true;
+            
+                    if (usuarioEstaLogado) {
+                        localStorage.setItem('usuarioEstaLogado', 'true');
+                        window.location.href = 'menu.html'; // Redireciona para menu.html
+                    }
+                });
+            </script>
         
             <a href="registro.html">Não tem uma conta?</a>
           </form>

@@ -9,10 +9,9 @@
     <link rel="stylesheet" href="css/cabecalho.css">
     <link rel="stylesheet" href="css/responsividade.css">
     <link rel="stylesheet" href="css/carrinho.css">
-    <link rel="stylesheet" href="css/perfil.css">
+    <link rel="stylesheet" href="css/resumo.css">
 </head>
-<body style="min-height: 500px;" >
-
+<body>
     <div class="barra-acessibilidade">
         <nav class="barra-acessibilidade-nav">
             <a id="aumentar" class="botao-acessibilidade aumentar" onclick="aumentarTamanhos()" href="javascript:;">
@@ -34,17 +33,14 @@
             </a>
         </nav>
     </div>
-    
- 
-    </div>
-    
+
     <nav class="nav-cabecalho">
         <div class="nav-left">
             <a class="logo" href="index.html">
                 <img class="logo" src="img\yipee-books-min2.png" alt="criatura do autismo escondida atrás de livros" style="cursor: pointer;">
             </a>
         </div>
-    
+
         <div class="nav-center">
             <ul class="nav justify-content-center">
                 <li class="abas">
@@ -53,48 +49,66 @@
                 <li class="abas">
                     <a class=" texto nav-link" href="loja.html">Loja</a>
                 </li>
-                <li class="abas">
-                    <a class="texto nav-link" href="carrinho.html">Carrinho</a>
-                </li>
                 <li class="abas ">
-                    <a class="texto nav-link atual" href="perfil.html"> Perfil </a>
+                    <a class="texto nav-link atual" href="carrinho.html">Carrinho</a>
+                </li>
+                <li class="abas">
+                    <a class="texto nav-link" href="perfil.html"> Perfil </a>
                 </li>
             </ul>
         </div>
+        <a href="#">
+            <img class="miniatura-perfil" src="img/evangelionLuis.png" alt="Miniatura Perfil" style="cursor: pointer;" id="perfilImg">
+        </a>  
+        
+        <script>
+            document.getElementById('perfilImg').addEventListener('click', function(e) {
+                e.preventDefault(); // Impede que o link seja seguido imediatamente
+                alert('Sair'); // Exibe uma caixa de diálogo com a mensagem "Sair"
+            });
+        </script> 
 
-        <a href="perfil.html">
-            <img class="miniatura-perfil" src="img/evangelionLuis.png" alt="Miniatura Perfil" style="cursor: pointer;">
-        </a>        
     </nav>
 
-    <div class="perfil" >
-        <img class="foto-perfil" src="img/evangelionLuis.png" alt="Imagem de Perfil">
-        <picture class="nome-desc">
-            <p class="nome-perfil" style="color: var(--texto-color)">Cendro Tindriebo</p>            <p class="desc" id="desc1"></p>
-        </picture>
-    </div>
+    <section class="resumo" style="color: var(--texto-color)">
+        
+        <h2 id="nomeLivro">Resumo</h2>
+        <div class="venda-resumo">
+            <form class="produto-resumo">
+                <img id="item-venda" class="img-resumo" src="img/amazing.jpg" alt="foto do item" >
+                <div class="descricao-resumo">
+                    <h3 style="color: var(--texto-color);">Amazing - Book</h3>
+                    <p id="precoLivro" style="font-size: var(--medium);">R$ 10.99</p>
+                </div>
+            </form>
+            <form class="produto-resumo">
+                <img id="item-venda" class="img-resumo" src="img/dragon.jpg" alt="foto do item" >
+                <div class="descricao-resumo">
+                    <h3 style="color: var(--texto-color); word-wrap: break-word;">Dragon Knights <br>Curse</h3>                    <p id="precoLivro" style="font-size: var(--medium);">R$ 10.99</p>
+                </div>
+            </form>
+            <form class="produto-resumo">
+                <img id="item-venda" class="img-resumo" src="img/amazing.jpg" alt="foto do item" >
+                <div class="descricao-resumo">
+                    <h3 style="color: var(--texto-color);">Amazing - Book</h3>
+                    <p id="precoLivro" style="font-size: var(--medium);">R$ 10.99</p>
+                </div>
+            </form>
+        </div>
+        <button id="fechar-compra" >Fechar Compra</button>
 
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        carregarTexto("txt/descricao.txt", 'desc1');});
-    </script>
+        <script>document.getElementById('fechar-compra').addEventListener('click', function() {
+            window.location.href = 'finalizada.html'; // Substitua 'menu.html' pelo caminho para a sua página de menu
+        });</script>
 
-    <p class="favoritos">Livros Favoritos</p> 
-    <nav class="livros-fav"> 
-        <a href="leitura.html">
-            <img class="foto-perfil" src="img/dragon.jpg" alt="Imagem de Perfil">
-            <p class="texto" style="justify-content: center;">Dragon Knights</p>
-        </a> 
-        <a href="leitura.html">
-            <img class="foto-perfil" src="img/amazing.jpg" alt="Imagem de Perfil">
-            <p class="texto" style="justify-content: center;">Amazing</p>
-        </a> 
-    </nav>
+    </section>
+
+    
+   
 
     <footer class="rodape">
     <p>Copyright &copy; 2022. Todos os direitos reservados.</p>
     </footer>
-
 
 
     <div vw class="enabled">
@@ -108,10 +122,11 @@
         new window.VLibras.Widget('https://vlibras.gov.br/app');
       </script>
 
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="js/carrinho.js"></script>
-    <script src="js/fotos.js"></script>
+    <script src="js/carregador.js"></script>
     <script src="js/acessibilidade.js"></script>
 </body>
 </html>

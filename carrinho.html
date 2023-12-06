@@ -56,18 +56,26 @@
                 </li>
             </ul>
         </div>
-        <a href="perfil.html">
-            <img class="miniatura-perfil" src="img/evangelionLuis.png" alt="Miniatura Perfil" style="cursor: pointer;">
-        </a>    
+        <a href="#">
+            <img class="miniatura-perfil" src="img/evangelionLuis.png" alt="Miniatura Perfil" style="cursor: pointer;" id="perfilImg" onclick="">
+        </a>  
 
+        <script>
+            document.getElementById('perfilImg').addEventListener('click', function(e) {
+                e.preventDefault(); // Impede que o link seja seguido imediatamente
+                document.getElementById('sair').style.visibility = 'visible'; // Torna o link "Sair" visível
+            });
+        </script>
     </nav>
-
+    <a href="login.html" style="visibility: collapse;"">
+        <p id="sair">Sair</p>
+    </a>
     <section class="resumo" style="color: var(--texto-color)">
         
         <h2 id="nomeLivro">Nome Livro</h2>
         <section class="venda">
             <img id="item-venda"  src="" alt="foto do item" >
-            <form id="resumin" method="get" action="/resumo">
+            <form id="resumin" method="get" action="/resumo.html">
                 <p class="price">R$ 9,60</p>
                 <hr>
                 <input type="hidden" id="product" name="produto" value="agenda">
@@ -84,8 +92,6 @@
         </div>
     </section>
 
-    
-   
 
     <footer class="rodape">
     <p>Copyright &copy; 2022. Todos os direitos reservados.</p>

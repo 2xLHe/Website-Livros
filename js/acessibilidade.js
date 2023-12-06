@@ -89,42 +89,44 @@ var downArrow = document.querySelector('.fa-arrow-down');
 
 function toggleFontSizeControl() {
     var control = document.getElementById('font-size-control');
+    var leitura = document.getElementById('leitura');
+
     if (control.style.display === "none") {
         control.style.display = "block";
     } else {
         control.style.display = "none";
     }
+
+    leitura.style.fontSize = fontSize + 'px'; // Altera o tamanho da fonte da seção #leitura
     document.getElementById('current-font-size').innerText = fontSize;
+    document.getElementById('font-size-control').style.display=flex;
 }
 
-function increaseFontSize() {
-    
+var tamanhoFonteLeituraAtual = 16; // Inicializa a variável tamanhoFonteLeituraAtual
 
-    if (fontSize < 24) {
-        fontSize += 1;
-        document.body.style.fontSize = fontSize + "px";
-        document.getElementById('current-font-size').innerText = fontSize;
-        downArrow.style.color = "black"; // reset the color of down arrow
+function aumentarFonteLeitura() {
+    if(tamanho >= 4){
+        document.querySelector('.aumentar').style.setProperty('color', 'gray');
+        return;
     }
+    document.querySelector('.diminuir').style.setProperty('color', 'black');
 
-    // If font size reaches the upper limit, change the color of up arrow to gray
-    if (fontSize === 24) {
-        upArrow.style.setProperty('color', 'gray');
-    }
+    tamanhoFonteLeituraAtual *= 1.1; // Aumenta o tamanho da fonte em 10%
+    document.documentElement.style.setProperty('--fonte-leitura', tamanhoFonteLeituraAtual + 'rem'); // Aplica o novo tamanho da fonte ao root
+    tamanho++;
 }
 
-function decreaseFontSize() {
-    if (fontSize > 10) {
-        fontSize -= 1;
-        document.body.style.fontSize = fontSize + "px";
-        document.getElementById('current-font-size').innerText = fontSize;
-        upArrow.style.color = "black"; // reset the color of up arrow
+function diminuirFonteLeitura() {
+    if (tamanho < 1){
+        document.querySelector('.diminuir').style.setProperty('color', 'gray');
+        return;
     }
 
-    // If font size reaches the lower limit, change the color of down arrow to gray
-    if (fontSize === 10) {
-        downArrow.style.setProperty('color', 'gray');
-    }
+    document.querySelector('.aumentar').style.setProperty('color', 'black');
+
+    tamanhoFonteLeituraAtual *= 0.9; // Diminui o tamanho da fonte em 10%
+    document.documentElement.style.setProperty('--fonte-leitura', tamanhoFonteLeituraAtual + 'rem'); // Aplica o novo tamanho da fonte ao root
+    tamanho--;
 }
 
 
@@ -136,3 +138,22 @@ function toggleEspacamentoLetras() {
         root.classList.add('espacado');
     }
 }
+
+window.addEventListener('DOMContentLoaded', (event) => {
+    // Seleciona todos os botões do cabeçalho
+    const botoesCabecalho = document.querySelectorAll('.cabecalho button');
+
+    // Adiciona um evento de clique a cada botão
+    botoesCabecalho.forEach((botao) => {
+        botao.addEventListener('click', function(e) {
+            e.preventDefault(); // Impede que o link seja seguido imediatamente
+
+            // Substitua isso pela sua lógica de verificação de login
+            const usuarioEstaLogado = localStorage.getItem('usuarioEstaLogado');
+
+            if (!usuarioEstaLogado) {
+                window.location.href = 'index.html';
+            }
+        });
+    });
+});
