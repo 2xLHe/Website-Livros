@@ -1,0 +1,210 @@
+body {
+    flex-direction: column;
+    background-color: whitesmoke; 
+    z-index: 0;   
+    min-height: 100%;
+}
+
+.barra-acessibilidade{
+    display: flex;
+    background-color: whitesmoke;
+    align-items: center;
+
+    height:4vh;
+    width:inherit;
+
+    margin: 0 var(--margin);
+    padding: 0 0 0 0;
+
+}
+
+.botao-acessibilidade{
+    display: flex;
+    justify-content: center;
+    font-size:var(--small);
+    cursor: pointer;
+    color: var(--text-color)
+}
+
+
+.contraste{
+    flex-direction: row-reverse;
+    position: absolute;
+    right:var(--margin);
+    margin-left: 10px;
+}
+
+@media (max-width: 380px){
+    .fa.fa-adjust{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .contraste{
+        right: 10%;
+    }
+
+}
+
+.barra-acessibilidade-nav{
+    position: absolute;
+    height: auto;
+    width: auto;
+    background-color: whitesmoke;
+    
+    margin: 0 0;
+    padding: 0 0;
+    left:var(--margin);
+
+}
+
+p{
+    display: flex;  
+    margin: 0 0;
+    padding: 0 0;
+}
+
+.diminuir{
+    margin-left: 10px;
+}
+
+
+nav{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-evenly;
+    background: var(--nav-color);
+    padding: 0.3vw 0.5vw;
+    margin-bottom: 4%;
+    height: 12vh;
+    position: sticky;
+    z-index: 100;
+}
+
+
+footer{
+    display: flex;
+    bottom:end;
+    align-items: center;
+    justify-content: space-evenly;
+    background: var(--nav-color);
+    height: 10vh;
+    z-index: 100;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.nav-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    z-index: 100;
+}
+
+/* Divs contidas no nav-left */
+.logo{
+    width: auto;
+    height: 112%;
+    object-fit: contain; 
+}
+
+.nav-center {
+    display: absolute;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    font-size: var(--medium);
+    font-weight: bold;
+    text-align: center;
+    color: black;
+}
+
+/* Divs contidas na nav-center */
+.abas{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    z-index: 100;
+    font-size: var(--medium);
+    font-weight: bold;
+    text-align: center;
+    color: black;
+}
+
+.abas:hover{
+    border: solid; 
+    border-width: 0.5vh;
+    border-radius: 5vw; 
+    border-color: var(--border-color);
+    object-fit: contain;
+}
+
+.atual{
+    object-fit: contain;
+    background-color:var(--select-color);
+    border-radius: 5vw; 
+}
+
+
+.nav-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%; 
+    z-index: 100;
+}
+
+/* Divs continas na nav-right */
+
+.caixa-pesquisa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6vh;
+    min-height: 40%;
+    margin: 5% var(--margin);
+    
+
+    background-color: var(--body-color);
+    border: 0.1vh solid #000;
+    border-radius: 3vw;
+
+    z-index: 100;
+}
+
+.img-pesquisa {
+    margin-right: 5%;
+    height: 60%;
+    object-fit: contain; /* Mantém a proporção da imagem */
+    z-index: 101;
+    cursor: pointer;
+}
+
+.pesquisa{
+    position: relative;
+    right: -5%;
+    width: 90%;
+    height: 95%;
+    border: none;
+    outline:none;
+    background-color: var(--body-color);
+    font-size: var(--small);
+    text-align: center;
+    object-fit: contain;
+    color: black;
+    z-index: 100;
+}
+
+.miniatura-perfil{
+    max-width: 4vw;
+    max-height: 4vw;
+    display: flex;
+    padding: 2vw 2vw;
+    object-fit: fill;
+    background-color: var(--body-color);
+    border: 0.1vh solid #000;
+    border-radius: 50%;
+    z-index: 100;
+}
