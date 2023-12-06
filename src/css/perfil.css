@@ -1,5 +1,6 @@
 .perfil {
     display: flex;
+    align-items: center;
     margin: 5vh calc(var(--margin)*1.5);
     height: 50vh;
 }
@@ -9,15 +10,58 @@
     max-width: 30vh;
     object-fit: fill;
     border: 0.3vw solid black;
+    order: 2;
 }
 
 .nome-desc{
     display: flex;
     flex-direction: column;
     padding-left: 5%;
+    order: 1;
+}
+
+@media (max-width: 576px) {
+    .perfil {
+        flex-direction: column;
+    }
 }
 
 .nome-perfil{
+    text-align: center;
     font-size: var(--xl-large);
     font-weight: bold;
+}
+
+.desc{
+    text-align: center;
+    font-size: var(--medium);
+}
+
+.favoritos{
+    display: flex;
+    justify-content: center;
+    font-size: var(--xl-large);
+    margin: 5vh var(--margin);
+    background-color: var(--bg-color);
+}
+
+.livros-fav {
+    max-width: 100vw;
+    display: flex;
+    margin: 5vh var(--margin);
+    background-color: var(--bg-color);
+    height: auto;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+}
+
+.livros-fav a {
+    scroll-snap-align: start;
+}
+
+@media (max-width: 600px) {
+    .livros-fav {
+        overflow-x: scroll;
+        margin: 5vh 0;
+    }
 }

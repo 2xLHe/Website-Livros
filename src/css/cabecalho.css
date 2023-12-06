@@ -196,3 +196,15 @@ footer{
     color: black;
     z-index: 100;
 }
+
+.miniatura-perfil{
+    max-width: 4vw;
+    max-height: 4vw;
+    display: flex;
+    padding: 6vw 6vw;
+    object-fit: fill;
+    background-color: var(--body-color);
+    border: 0.1vh solid #000;
+    border-radius: 50%;
+    z-index: 100;
+}

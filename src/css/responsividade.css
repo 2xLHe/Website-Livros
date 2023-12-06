@@ -4,7 +4,7 @@
     --select-color: #ecb92ea7;
     --border-color: #000000;
     --texto-color: #f5f5f5;
-    --bg-color: #f0f0f0;
+    --bg-color: lightgray;
     --xl-large: 2.4rem;
     --large: 1.6rem;
     --medium: 1.2rem;
@@ -47,6 +47,7 @@
     .menuInfo {
         flex-direction: column;
     }  
+
 }
 
 /* Para telas grandes (lg) */
@@ -100,3 +101,25 @@
     text-align: center;
     color: black;
 }
+
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5vh var(--margin);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5vh var(--margin);
+}
+
+form *{
+    margin: 1vh 0;
+}
+

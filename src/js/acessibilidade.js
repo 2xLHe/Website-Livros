@@ -62,3 +62,16 @@ let altoContrasteAtivado = false;
 function toggleAltoContraste() {
 
 }
+
+
+// A função é chamada quando o botão é clicado
+function toggleModoAtencao() {
+    const leitura = document.getElementById('leitura');
+    leitura.classList.toggle('modo-atencao');
+}
+
+// Event listener para o botão de alternância
+document.addEventListener('DOMContentLoaded', function () {
+    const btnModoAtencao = document.getElementById('modo-atencao');
+    btnModoAtencao.addEventListener('click', toggleModoAtencao);
+});
