@@ -19,6 +19,9 @@
     background-color: black; 
 }
 
+.books-grid{
+    margin: 0 var(--margin);
+}
 
 .capa-livro{
     width: 20%;

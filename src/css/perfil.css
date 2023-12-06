@@ -1,0 +1,23 @@
+.perfil {
+    display: flex;
+    margin: 5vh calc(var(--margin)*1.5);
+    height: 50vh;
+}
+
+.foto-perfil {
+    max-height: 40vh;
+    max-width: 30vh;
+    object-fit: fill;
+    border: 0.3vw solid black;
+}
+
+.nome-desc{
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+}
+
+.nome-perfil{
+    font-size: var(--xl-large);
+    font-weight: bold;
+}
