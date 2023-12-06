@@ -35,7 +35,7 @@
 
     <nav class="nav-cabecalho">
         <div class="nav-left">
-            <a class="logo" href="index.html">
+            <a class="logo" href="menu.html">
                 <img class="logo" src="img\yipee-books-min2.png" alt="criatura do autismo escondida atrás de livros" style="cursor: pointer;">
             </a>
         </div>
@@ -70,25 +70,32 @@
 
     <section id="livro">
         <nav class="mudancas-texto">
-            <p id="tema" onclick="">
-                <i class="fa fa-bold"></i> 
+            <p id="temaBold">
+                <button onclick="boldar()">              
+                    <i class="fa fa-bold"></i> 
+                </button>
+
             </p>
             <div class="filler-bar"></div>
 
             <div id="font-size-control">
-                    <button onclick="increaseFontSize()"><i class="fa fa-plus"></i></button>
-                    <p id="current-font-size"></p>
-                    <button onclick="decreaseFontSize()"><i class="fa fa-minus"></i></button>
+                <button onclick="increaseTextFontSize()"><i class="fa fa-plus"></i></button>
+                <p id="current-font-size"></p>
+                <button onclick="decreaseTextFontSize()"><i class="fa fa-minus"></i></button>
             </div>
             <div class="filler-bar"></div>
 
-            <p id="text-size" onclick="toggleFontSizeControl()">
-                <i class="fa fa-text-height"></i> 
+            <p id="text-size" ">
+                <button onclick="aumentarEspacamento()">
+                    <i class="fa fa-text-height"></i> 
+                </button>
             </p>
 
             <div class="filler-bar"></div>
-            <p id="tema" onclick="">
-                <i class="fa fa-adjust"></i> 
+            <p id="tema">
+                <button onclick="escurar()">              
+                    <i class="fa fa-adjust"></i> 
+                </button>   
             </p>
 
         </nav>

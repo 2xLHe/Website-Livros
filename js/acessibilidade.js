@@ -102,33 +102,6 @@ function toggleFontSizeControl() {
     document.getElementById('font-size-control').style.display=flex;
 }
 
-var tamanhoFonteLeituraAtual = 16; // Inicializa a variável tamanhoFonteLeituraAtual
-
-function aumentarFonteLeitura() {
-    if(tamanho >= 4){
-        document.querySelector('.aumentar').style.setProperty('color', 'gray');
-        return;
-    }
-    document.querySelector('.diminuir').style.setProperty('color', 'black');
-
-    tamanhoFonteLeituraAtual *= 1.1; // Aumenta o tamanho da fonte em 10%
-    document.documentElement.style.setProperty('--fonte-leitura', tamanhoFonteLeituraAtual + 'rem'); // Aplica o novo tamanho da fonte ao root
-    tamanho++;
-}
-
-function diminuirFonteLeitura() {
-    if (tamanho < 1){
-        document.querySelector('.diminuir').style.setProperty('color', 'gray');
-        return;
-    }
-
-    document.querySelector('.aumentar').style.setProperty('color', 'black');
-
-    tamanhoFonteLeituraAtual *= 0.9; // Diminui o tamanho da fonte em 10%
-    document.documentElement.style.setProperty('--fonte-leitura', tamanhoFonteLeituraAtual + 'rem'); // Aplica o novo tamanho da fonte ao root
-    tamanho--;
-}
-
 
 function toggleEspacamentoLetras() {
     const root = document.querySelector(':root');
@@ -157,3 +130,73 @@ window.addEventListener('DOMContentLoaded', (event) => {
         });
     });
 });
+
+
+
+
+let fonteLeitura = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--texto-leitura'));
+
+function increaseTextFontSize() {
+    if (fonteLeitura >= 6) {
+        return;
+    }
+
+    fonteLeitura *= 1.1;
+    document.documentElement.style.setProperty('--texto-leitura', fonteLeitura + 'rem');
+    fonteLeitura++;
+}
+
+function decreaseTextFontSize() {
+    if (fonteLeitura < 0.8) {
+        return;
+    }
+
+    fonteLeitura *= 0.9;
+    document.documentElement.style.setProperty('--texto-leitura', fonteLeitura + 'rem');
+    fonteLeitura--;
+}
+
+
+var isBold = false; // Variável para rastrear o estado do peso da fonte
+let leitura = document.getElementById('leitura');
+
+function boldar() {
+    if (isBold) {
+        leitura.style.fontWeight = 'normal';
+        isBold = false;
+    } else {
+        leitura.style.fontWeight = 'bold';
+        isBold = true;
+    }
+}
+
+
+var escuro = 0;
+
+function escurar(){
+    if(escuro == 0){
+        document.documentElement.style.setProperty('--bg1-color', 'black');
+        document.documentElement.style.setProperty('--texto-color', 'white');
+        escuro = 1;
+    }else{
+        document.documentElement.style.setProperty('--bg1-color', '#f0f0f0');
+        document.documentElement.style.setProperty('--texto-color', 'black');
+        escuro = 0;
+    }
+}
+
+var espacamento = 0;
+let espacamentoAtual = parseFloat(window.getComputedStyle(leitura).getPropertyValue('line-height')); // Corrigido para passar o elemento 'leitura'
+let copia = espacamentoAtual;
+
+function aumentarEspacamento() {
+    console.log(espacamentoAtual);
+    if(espacamentoAtual == 0){
+        leitura.style.lineHeight = (espacamentoAtual * 1.2) + 'vh';
+        espacamentoAtual++;
+    }
+    else{
+        leitura.style.lineHeight = (copia) + 'px';
+        espacamentoAtual--;
+    }
+}

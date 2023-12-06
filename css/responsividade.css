@@ -5,7 +5,7 @@
     --border-color: #000000;
     --texto-color: black;
     --bg-color: lightgray;
-    --bg-color: #f0f0f0;
+    --bg1-color: #f0f0f0;
     --footer-color:black;
     --xl-large: 2.4rem;
     --large: 1.6rem;
@@ -173,6 +173,7 @@ nav.mudancas-texto{
     display: flex;
     width: 50%;
     padding: 0 0;
+    padding-bottom:2vh;
     margin: 0 0;
     background-color: var(--body-color);
     color: var(--texto-color);
@@ -195,7 +196,7 @@ nav.mudancas-texto *{
     flex-direction: column;
 }
 
-#font-size-control *{
+.mudancas-texto *{
     border: none;
     background-color: var(--button-color);
 }
@@ -207,6 +208,7 @@ nav.mudancas-texto *{
     align-items: center;
     margin: 0 var(--margin);
     font-size: var(--texto-leitura);
+    background-color: var(--bg1-color);
     min-height: 100vh;
     min-width: 90%;
     border: 0.1vh solid black;
