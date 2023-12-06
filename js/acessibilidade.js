@@ -137,7 +137,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 let fonteLeitura = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--texto-leitura'));
 
 function increaseTextFontSize() {
-    if (fonteLeitura >= 6) {
+    if (fonteLeitura >= 2.5) {
         return;
     }
 
@@ -185,18 +185,16 @@ function escurar(){
     }
 }
 
-var espacamento = 0;
-let espacamentoAtual = parseFloat(window.getComputedStyle(leitura).getPropertyValue('line-height')); // Corrigido para passar o elemento 'leitura'
-let copia = espacamentoAtual;
-
+var aumentar = 0;
 function aumentarEspacamento() {
-    console.log(espacamentoAtual);
-    if(espacamentoAtual == 0){
-        leitura.style.lineHeight = (espacamentoAtual * 1.2) + 'vh';
-        espacamentoAtual++;
+    let espacamentoAtual = parseFloat(window.getComputedStyle(leitura).getPropertyValue('line-height'));
+
+    if (aumentar == 0) {
+        leitura.style.lineHeight = (espacamentoAtual + 4) + 'px';
+        aumentar++;
     }
     else{
-        leitura.style.lineHeight = (copia) + 'px';
-        espacamentoAtual--;
+        leitura.style.lineHeight = (espacamentoAtual - 4) + 'px';
+        aumentar--;
     }
 }
