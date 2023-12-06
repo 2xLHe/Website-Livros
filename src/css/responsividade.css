@@ -123,3 +123,21 @@ form *{
     margin: 1vh 0;
 }
 
+nav.mudancas-texto{
+    background-color: var(--texto-color);
+
+}
+
+#font-size-control{
+    background-color: var(--bg-color);
+}
+
+#font-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+#font-size-control *{
+    border: none;
+    background-color: var(--button-color;
+}

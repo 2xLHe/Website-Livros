@@ -75,3 +75,49 @@ document.addEventListener('DOMContentLoaded', function () {
     const btnModoAtencao = document.getElementById('modo-atencao');
     btnModoAtencao.addEventListener('click', toggleModoAtencao);
 });
+
+
+
+var fontSize = 16; // Tamanho inicial da fonte
+var upArrow = document.querySelector('.fa-arrow-up');
+var downArrow = document.querySelector('.fa-arrow-down');
+
+function toggleFontSizeControl() {
+    var control = document.getElementById('font-size-control');
+    if (control.style.display === "none") {
+        control.style.display = "block";
+    } else {
+        control.style.display = "none";
+    }
+    document.getElementById('current-font-size').innerText = fontSize;
+}
+
+function increaseFontSize() {
+    
+
+    if (fontSize < 24) {
+        fontSize += 1;
+        document.body.style.fontSize = fontSize + "px";
+        document.getElementById('current-font-size').innerText = fontSize;
+        downArrow.style.color = "black"; // reset the color of down arrow
+    }
+
+    // If font size reaches the upper limit, change the color of up arrow to gray
+    if (fontSize === 24) {
+        upArrow.style.setProperty('color', 'gray');
+    }
+}
+
+function decreaseFontSize() {
+    if (fontSize > 10) {
+        fontSize -= 1;
+        document.body.style.fontSize = fontSize + "px";
+        document.getElementById('current-font-size').innerText = fontSize;
+        upArrow.style.color = "black"; // reset the color of up arrow
+    }
+
+    // If font size reaches the lower limit, change the color of down arrow to gray
+    if (fontSize === 10) {
+        downArrow.style.setProperty('color', 'gray');
+    }
+}

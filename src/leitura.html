@@ -59,9 +59,18 @@
             <p id="tema" onclick="">
                 <i class="fa fa-bold"></i> 
             </p>
-            <p id="text-size" onclick="">
+
+            <div id="font-size-control">
+                    <button onclick="increaseFontSize()"><i class="fa fa-arrow-up"></i></button>
+                    <p id="current-font-size">16</p>
+
+                    <button onclick="decreaseFontSize()"><i class="fa fa-arrow-down"></i></button>
+            </div>
+            
+            <p id="text-size" onclick="toggleFontSizeControl()">
                 <i class="fa fa-text-height"></i> 
             </p>
+
             <p id="tema" onclick="">
                 <i class="fa fa-bold"></i> 
             </p>
