@@ -121,3 +121,8 @@ function decreaseFontSize() {
         downArrow.style.setProperty('color', 'gray');
     }
 }
+
+
+
+
+

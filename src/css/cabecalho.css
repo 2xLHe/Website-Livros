@@ -201,7 +201,7 @@ footer{
     max-width: 4vw;
     max-height: 4vw;
     display: flex;
-    padding: 6vw 6vw;
+    padding: 2vw 2vw;
     object-fit: fill;
     background-color: var(--body-color);
     border: 0.1vh solid #000;

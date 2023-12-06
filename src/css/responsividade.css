@@ -10,6 +10,7 @@
     --medium: 1.2rem;
     --small: 1rem;
     --margin: 15vw;
+    --font-weight: normal;
 }
 
 .texto{
@@ -75,6 +76,7 @@
     margin-left: 5%;
     padding-bottom: 125%; /* 3/4 * 100% */
     margin-bottom: 1%;
+    object-fit: fill;
     justify-content: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -97,7 +99,7 @@
 
 .nome-livro {
     font-size: var(--large);
-    font-weight: bold;
+    font-weight: var(--font-weight);
     text-align: center;
     color: black;
 }
@@ -139,5 +141,5 @@ nav.mudancas-texto{
 
 #font-size-control *{
     border: none;
-    background-color: var(--button-color;
+    background-color: var(--button-color);
 }
