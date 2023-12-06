@@ -4,7 +4,11 @@
     --select-color: #ecb92ea7;
     --border-color: #000000;
     --texto-color: #f5f5f5;
+<<<<<<< HEAD
     --bg-color: lightgray;
+=======
+    --bg-color: #f0f0f0;
+>>>>>>> b65f2282ab9005282a41673f1aee27c6e7f8ce00
     --xl-large: 2.4rem;
     --large: 1.6rem;
     --medium: 1.2rem;
@@ -22,7 +26,11 @@
 }
 
 .texto:hover{
+<<<<<<< HEAD
     color: var(--texto-color);
+=======
+    color:  var(--texto-color);
+>>>>>>> b65f2282ab9005282a41673f1aee27c6e7f8ce00
     
 }
 

@@ -1,6 +1,7 @@
 .perfil {
     display: flex;
     align-items: center;
+<<<<<<< HEAD
     margin: 5vh calc(var(--margin)*1.5);
     height: 50vh;
 }
@@ -64,4 +65,15 @@
         overflow-x: scroll;
         margin: 5vh 0;
     }
+=======
+    margin: 5vh var(--margin, 20%);
+    width: 80%; /* Ajustar a largura da div conforme necessário */
+}
+
+.foto-perfil {
+    width:50vw;
+    height:100vh;
+    object-fit: cover;
+    transition: all 0.1s ease;
+>>>>>>> b65f2282ab9005282a41673f1aee27c6e7f8ce00
 }
