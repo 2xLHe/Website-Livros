@@ -13,57 +13,62 @@
 </head>
 
 <body>
-    <div class="barra-acessibilidade">
-      <nav class="barra-acessibilidade-nav">
-          <a id="aumentar" class="botao-acessibilidade aumentar" onclick="aumentarTamanhos()" href="javascript:;">
-              <i class="fa fa-plus"> Aumentar</i> 
-          </a>
-          <a id="diminuir" class="botao-acessibilidade diminuir" onclick="diminuirTamanhos()" href="javascript:;">
-              <i class="fa fa-minus"> Diminuir</i> 
-          </a>
-      </nav>
+  <div class="barra-acessibilidade">
+    <nav class="barra-acessibilidade-nav">
+        <a id="aumentar" class="botao-acessibilidade aumentar" onclick="aumentarTamanhos()" href="javascript:;">
+            <i class="fa fa-plus"> Aumentar</i> 
+        </a>
+        <a id="diminuir" class="botao-acessibilidade diminuir" onclick="diminuirTamanhos()" href="javascript:;">
+            <i class="fa fa-minus"> Diminuir</i> 
+        </a>
+    </nav>
 
-      <div class="filler-bar"></div>
+    <div class="filler-bar"></div>
 
-      <nav class="barra-acessibilidade-nav-direita">
-          <a id="espacamentoLetras" class="botao-acessibilidade contraste" onclick="toggleEspacamentoLetras()" href="javascript:;">
-              <i class="fa fa-text-width"> Espaçamento</i> 
-          </a>
-          <a id="altoContraste" class="botao-acessibilidade contraste" onclick="toggleAltoContraste()" href="javascript:;">
-              <i class="fa fa-adjust"> Alto contraste</i> 
-          </a>
-      </nav>
-  </div>
+    <nav class="barra-acessibilidade-nav-direita">
+        <a id="espacamentoLetras" class="botao-acessibilidade contraste" onclick="toggleEspacamentoLetras()" href="javascript:;">
+            <i class="fa fa-text-width"> Espaçamento</i> 
+        </a>
+        <a id="altoContraste" class="botao-acessibilidade contraste" onclick="toggleAltoContraste()" href="javascript:;">
+            <i class="fa fa-adjust"> Alto contraste</i> 
+        </a>
+    </nav>
+</div>
 
-  <nav class="nav-cabecalho">
+<nav class="nav-cabecalho">
     <div class="nav-left">
-      <a class="logo" href="menu.html">
-          <img class="logo" src="img\yipee-books-min2.png" alt="criatura do autismo escondida atrás de livros" style="cursor: pointer;">
-      </a>
-  </div>
+        <a class="logo" href="index.html">
+            <img class="logo" src="img\yipee-books-min2.png" alt="criatura do autismo escondida atrás de livros" style="cursor: pointer;">
+        </a>
+    </div>
 
-      <div class="nav-center">
-          <ul class="nav justify-content-center">
+    <div class="nav-center">
+        <ul class="nav justify-content-center">
             <li class="abas">
-              <a class=" texto nav-link" href="index.html">Meus Livros</a>
+                <a class=" texto nav-link" href="menu.html">Meus Livros</a>
             </li>
-            <li class="abas ">
+            <li class="abas">
                 <a class=" texto nav-link atual" href="loja.html">Loja</a>
             </li>
-              <li class="abas">
-                  <a class="texto nav-link" href="carrinho.html">Carrinho</a>
-              </li>
-              <li class="abas">
-                  <a class="texto nav-link" href="perfil.html"> Perfil </a>
-              </li>
-          </ul>
-      </div>
+            <li class="abas ">
+                <a class="texto nav-link " href="carrinho.html">Carrinho</a>
+            </li>
+            <li class="abas">
+                <a class="texto nav-link" href="perfil.html"> Perfil </a>
+            </li>
+        </ul>
+    </div>
+    <a href="#">
+        <img class="miniatura-perfil" src="img/evangelionLuis.png" alt="Miniatura Perfil" style="cursor: pointer;" id="perfilImg" onclick="">
+    </a>  
 
-      <a href="perfil.html">
-        <img class="miniatura-perfil" src="img/evangelionLuis.png" alt="Miniatura Perfil" style="cursor: pointer;">
-    </a>    
-
-  </nav>
+    <script>
+        document.getElementById('perfilImg').addEventListener('click', function(e) {
+            e.preventDefault(); // Impede que o link seja seguido imediatamente
+            document.getElementById('sair').style.visibility = 'visible'; // Torna o link "Sair" visível
+        });
+    </script>
+</nav>
 
 
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">

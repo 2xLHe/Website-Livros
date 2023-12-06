@@ -34,35 +34,41 @@
             </a>
         </nav>
     </div>
-    
+
     <nav class="nav-cabecalho">
         <div class="nav-left">
             <a class="logo" href="index.html">
                 <img class="logo" src="img\yipee-books-min2.png" alt="criatura do autismo escondida atrás de livros" style="cursor: pointer;">
             </a>
         </div>
-    
+
         <div class="nav-center">
             <ul class="nav justify-content-center">
                 <li class="abas">
-                    <a class=" texto nav-link" href="index.html">Meus Livros</a>
+                    <a class=" texto nav-link" href="menu.html">Meus Livros</a>
                 </li>
                 <li class="abas">
                     <a class=" texto nav-link" href="loja.html">Loja</a>
                 </li>
-                <li class="abas">
+                <li class="abas ">
                     <a class="texto nav-link" href="carrinho.html">Carrinho</a>
                 </li>
-                <li class="abas atual">
+                <li class="abas">
                     <a class="texto nav-link" href="perfil.html"> Perfil </a>
                 </li>
             </ul>
         </div>
+        <a href="#">
+            <img class="miniatura-perfil" src="img/evangelionLuis.png" alt="Miniatura Perfil" style="cursor: pointer;" id="perfilImg" onclick="">
+        </a>  
 
-        <img class="miniatura-perfil" src="img\evangelionLuis.png" alt="Miniatura Perfil" style="cursor: pointer;">
-    
+        <script>
+            document.getElementById('perfilImg').addEventListener('click', function(e) {
+                e.preventDefault(); // Impede que o link seja seguido imediatamente
+                document.getElementById('sair').style.visibility = 'visible'; // Torna o link "Sair" visível
+            });
+        </script>
     </nav>
-
 
     <section>
         <form method="get" action="menu.html">

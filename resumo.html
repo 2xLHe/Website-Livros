@@ -44,13 +44,13 @@
         <div class="nav-center">
             <ul class="nav justify-content-center">
                 <li class="abas">
-                    <a class=" texto nav-link" href="index.html">Meus Livros</a>
+                    <a class=" texto nav-link" href="menu.html">Meus Livros</a>
                 </li>
                 <li class="abas">
                     <a class=" texto nav-link" href="loja.html">Loja</a>
                 </li>
                 <li class="abas ">
-                    <a class="texto nav-link atual" href="carrinho.html">Carrinho</a>
+                    <a class="texto nav-link" href="carrinho.html">Carrinho</a>
                 </li>
                 <li class="abas">
                     <a class="texto nav-link" href="perfil.html"> Perfil </a>
@@ -58,16 +58,15 @@
             </ul>
         </div>
         <a href="#">
-            <img class="miniatura-perfil" src="img/evangelionLuis.png" alt="Miniatura Perfil" style="cursor: pointer;" id="perfilImg">
+            <img class="miniatura-perfil" src="img/evangelionLuis.png" alt="Miniatura Perfil" style="cursor: pointer;" id="perfilImg" onclick="">
         </a>  
-        
+
         <script>
             document.getElementById('perfilImg').addEventListener('click', function(e) {
                 e.preventDefault(); // Impede que o link seja seguido imediatamente
-                alert('Sair'); // Exibe uma caixa de diálogo com a mensagem "Sair"
+                document.getElementById('sair').style.visibility = 'visible'; // Torna o link "Sair" visível
             });
-        </script> 
-
+        </script>
     </nav>
 
     <section class="resumo" style="color: var(--texto-color)">
