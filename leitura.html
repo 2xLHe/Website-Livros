@@ -13,19 +13,24 @@
 <body>
     <div class="barra-acessibilidade">
         <nav class="barra-acessibilidade-nav">
-                <p id="aumentar" class="botao-acessibilidade aumentar" onclick="aumentarTamanhos()">
-                    <i class="fa fa-plus">Aumentar</i> 
-                </p>
-                <p id="diminuir" class="botao-acessibilidade diminuir" onclick="diminuirTamanhos()">
-                    <i class="fa fa-minus">Diminuir</i>
-                </p>
-        </nav> 
-
+            <a id="aumentar" class="botao-acessibilidade aumentar" onclick="aumentarTamanhos()" href="javascript:;">
+                <i class="fa fa-plus"> Aumentar</i> 
+            </a>
+            <a id="diminuir" class="botao-acessibilidade diminuir" onclick="diminuirTamanhos()" href="javascript:;">
+                <i class="fa fa-minus"> Diminuir</i> 
+            </a>
+        </nav>
+    
         <div class="filler-bar"></div>
-
-        <p id="altoContraste" class="botao-acessibilidade contraste" onclick="toggleAltoContraste()">
-            <i class="fa fa-adjust">Alto contraste</i>
-        </p>   
+    
+        <nav class="barra-acessibilidade-nav-direita">
+            <a id="espacamentoLetras" class="botao-acessibilidade contraste" onclick="toggleEspacamentoLetras()" href="javascript:;">
+                <i class="fa fa-text-width"> Espaçamento</i> 
+            </a>
+            <a id="altoContraste" class="botao-acessibilidade contraste" onclick="toggleAltoContraste()" href="javascript:;">
+                <i class="fa fa-adjust"> Alto contraste</i> 
+            </a>
+        </nav>
     </div>
 
     <nav class="nav-cabecalho">

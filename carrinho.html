@@ -13,19 +13,24 @@
 <body>
     <div class="barra-acessibilidade">
         <nav class="barra-acessibilidade-nav">
-                <p id="aumentar" class="botao-acessibilidade aumentar" onclick="aumentarTamanhos()">
-                    <i class="fa fa-plus">Aumentar</i> 
-                </p>
-                <p id="diminuir" class="botao-acessibilidade diminuir" onclick="diminuirTamanhos()">
-                    <i class="fa fa-minus">Diminuir</i>
-                </p>
-        </nav> 
-
+            <a id="aumentar" class="botao-acessibilidade aumentar" onclick="aumentarTamanhos()" href="javascript:;">
+                <i class="fa fa-plus"> Aumentar</i> 
+            </a>
+            <a id="diminuir" class="botao-acessibilidade diminuir" onclick="diminuirTamanhos()" href="javascript:;">
+                <i class="fa fa-minus"> Diminuir</i> 
+            </a>
+        </nav>
+    
         <div class="filler-bar"></div>
-
-        <p id="altoContraste" class="botao-acessibilidade contraste" onclick="toggleAltoContraste()">
-            <i class="fa fa-adjust">Alto contraste</i>
-        </p>   
+    
+        <nav class="barra-acessibilidade-nav-direita">
+            <a id="espacamentoLetras" class="botao-acessibilidade contraste" onclick="toggleEspacamentoLetras()" href="javascript:;">
+                <i class="fa fa-text-width"> Espaçamento</i> 
+            </a>
+            <a id="altoContraste" class="botao-acessibilidade contraste" onclick="toggleAltoContraste()" href="javascript:;">
+                <i class="fa fa-adjust"> Alto contraste</i> 
+            </a>
+        </nav>
     </div>
 
     <nav class="nav-cabecalho">
@@ -57,25 +62,30 @@
 
     </nav>
 
-    <div class="resumo">
-        <img class="img-fluid-2" src="img/yipee-books-min.png" alt="foto do item" >
-        <form method="get" action="/shops/caaso/cart">
-            <h1>Agenda</h1>
-            <p class="price">R$ 9,60</p>
-            <hr>
-            <input type="hidden" id="product" name="produto" value="agenda">
-            
-            <label for="amount">Unidades:</label>
-            <input type="number" name="unidades" id="amount" value="1" min="1" max="5">
-            
-            <button type="submit">Adicionar ao carrinho</button>  
-        </form>
+    <section class="resumo" style="color: var(--texto-color)">
+        
+        <h2 id="nomeLivro">Nome Livro</h2>
+        <section class="venda">
+            <img id="item-venda"  src="" alt="foto do item" >
+            <form id="resumin" method="get" action="/resumo">
+                <p class="price">R$ 9,60</p>
+                <hr>
+                <input type="hidden" id="product" name="produto" value="agenda">
+                
+                <label for="amount">Unidades:</label>
+                <input type="number" name="unidades" id="amount" value="1" min="1" max="5">
+                
+                <button type="submit">Adicionar ao carrinho</button>  
+            </form>
+        </section>
+        <div class="sinopse">
+            <p class="titulo" style="justify-content: center;">Sinopse</p>
+            <p id="sinopse-texto"></p>
+        </div>
+    </section>
 
-        <p class="sinopse">
-            lorem ipsum
-        </p>
-
-    </div>
+    
+   
 
     <footer class="rodape">
     <p>Copyright &copy; 2022. Todos os direitos reservados.</p>
@@ -97,6 +107,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="js/carrinho.js"></script>
+    <script src="js/carregador.js"></script>
     <script src="js/acessibilidade.js"></script>
 </body>
 </html>

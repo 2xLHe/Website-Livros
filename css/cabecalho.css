@@ -27,13 +27,6 @@ body {
 }
 
 
-.contraste{
-    flex-direction: row-reverse;
-    position: absolute;
-    right:var(--margin);
-    margin-left: 10px;
-}
-
 @media (max-width: 380px){
     .fa.fa-adjust{
         display: flex;
@@ -56,6 +49,17 @@ body {
     left:var(--margin);
 
 }
+.barra-acessibilidade-nav-direita{
+    position: absolute;
+    height: auto;
+    width: auto;
+    background-color: var(--body-color);
+    
+    margin: 0 0;
+    padding: 0 0;
+    right:var(--margin);
+}
+
 
 p{
     display: flex;  
@@ -64,6 +68,12 @@ p{
 }
 
 .diminuir{
+    margin-left: 10px;
+}
+
+.contraste{
+    flex-direction: row-reverse;
+    right:var(--margin);
     margin-left: 10px;
 }
 

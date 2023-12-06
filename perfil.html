@@ -11,23 +11,31 @@
     <link rel="stylesheet" href="css/carrinho.css">
     <link rel="stylesheet" href="css/perfil.css">
 </head>
-<body style="min-height: 500px;">
+<body style="min-height: 500px;" >
 
     <div class="barra-acessibilidade">
         <nav class="barra-acessibilidade-nav">
-                <p id="aumentar" class="botao-acessibilidade aumentar" onclick="aumentarTamanhos()">
-                    <i class="fa fa-plus">Aumentar</i> 
-                </p>
-                <p id="diminuir" class="botao-acessibilidade diminuir" onclick="diminuirTamanhos()">
-                    <i class="fa fa-minus">Diminuir</i>
-                </p>
-        </nav> 
+            <a id="aumentar" class="botao-acessibilidade aumentar" onclick="aumentarTamanhos()" href="javascript:;">
+                <i class="fa fa-plus"> Aumentar</i> 
+            </a>
+            <a id="diminuir" class="botao-acessibilidade diminuir" onclick="diminuirTamanhos()" href="javascript:;">
+                <i class="fa fa-minus"> Diminuir</i> 
+            </a>
+        </nav>
     
         <div class="filler-bar"></div>
     
-        <p id="altoContraste" class="botao-acessibilidade contraste" onclick="toggleAltoContraste()">
-            <i class="fa fa-adjust">Alto contraste</i>
-        </p>   
+        <nav class="barra-acessibilidade-nav-direita">
+            <a id="espacamentoLetras" class="botao-acessibilidade contraste" onclick="toggleEspacamentoLetras()" href="javascript:;">
+                <i class="fa fa-text-width"> Espaçamento</i> 
+            </a>
+            <a id="altoContraste" class="botao-acessibilidade contraste" onclick="toggleAltoContraste()" href="javascript:;">
+                <i class="fa fa-adjust"> Alto contraste</i> 
+            </a>
+        </nav>
+    </div>
+    
+ 
     </div>
     
     <nav class="nav-cabecalho">
@@ -59,14 +67,17 @@
         </a>        
     </nav>
 
-    <div class="perfil">
+    <div class="perfil" >
         <img class="foto-perfil" src="img/evangelionLuis.png" alt="Imagem de Perfil">
         <picture class="nome-desc">
-            <p class="nome-perfil">Nome Sobrenome</p>
-            <p class="desc">Lorem Ipsum sajihjbjfasbfk hsabdfkdsbkfbhk asdbasbkdhasbkh</p>
+            <p class="nome-perfil" style="color: var(--texto-color)">Cendro Tindriebo</p>            <p class="desc" id="desc1"></p>
         </picture>
     </div>
 
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        carregarTexto("txt/descricao.txt", 'desc1');});
+    </script>
 
     <p class="favoritos">Livros Favoritos</p> 
     <nav class="livros-fav"> 
@@ -100,6 +111,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="js/carrinho.js"></script>
+    <script src="js/fotos.js"></script>
     <script src="js/acessibilidade.js"></script>
 </body>
 </html>

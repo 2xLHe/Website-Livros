@@ -13,97 +13,105 @@
 </head>
 
 <body>
-  <div class="barra-acessibilidade">
-    <nav class="barra-acessibilidade-nav">
-            <p id="aumentar" class="botao-acessibilidade aumentar" onclick="aumentarTamanhos()">
-                <i class="fa fa-plus">Aumentar</i> 
-            </p>
-            <p id="diminuir" class="botao-acessibilidade diminuir" onclick="diminuirTamanhos()">
-                <i class="fa fa-minus">Diminuir</i>
-            </p>
-    </nav> 
+    <div class="barra-acessibilidade">
+      <nav class="barra-acessibilidade-nav">
+          <a id="aumentar" class="botao-acessibilidade aumentar" onclick="aumentarTamanhos()" href="javascript:;">
+              <i class="fa fa-plus"> Aumentar</i> 
+          </a>
+          <a id="diminuir" class="botao-acessibilidade diminuir" onclick="diminuirTamanhos()" href="javascript:;">
+              <i class="fa fa-minus"> Diminuir</i> 
+          </a>
+      </nav>
 
-    <div class="filler-bar"></div>
+      <div class="filler-bar"></div>
 
-    <p id="altoContraste" class="botao-acessibilidade contraste" onclick="toggleAltoContraste()">
-        <i class="fa fa-adjust">Alto contraste</i>
-    </p>   
-</div>
+      <nav class="barra-acessibilidade-nav-direita">
+          <a id="espacamentoLetras" class="botao-acessibilidade contraste" onclick="toggleEspacamentoLetras()" href="javascript:;">
+              <i class="fa fa-text-width"> Espaçamento</i> 
+          </a>
+          <a id="altoContraste" class="botao-acessibilidade contraste" onclick="toggleAltoContraste()" href="javascript:;">
+              <i class="fa fa-adjust"> Alto contraste</i> 
+          </a>
+      </nav>
+  </div>
 
-<nav class="nav-cabecalho">
-  <div class="nav-left">
-    <a class="logo" href="index.html">
-        <img class="logo" src="img\yipee-books-min2.png" alt="criatura do autismo escondida atrás de livros" style="cursor: pointer;">
-    </a>
-</div>
+  <nav class="nav-cabecalho">
+    <div class="nav-left">
+      <a class="logo" href="menu.html">
+          <img class="logo" src="img\yipee-books-min2.png" alt="criatura do autismo escondida atrás de livros" style="cursor: pointer;">
+      </a>
+  </div>
 
-    <div class="nav-center">
-        <ul class="nav justify-content-center">
-          <li class="abas">
-            <a class=" texto nav-link" href="index.html">Meus Livros</a>
-          </li>
-          <li class="abas ">
-              <a class=" texto nav-link atual" href="loja.html">Loja</a>
-          </li>
+      <div class="nav-center">
+          <ul class="nav justify-content-center">
             <li class="abas">
-                <a class="texto nav-link" href="carrinho.html">Carrinho</a>
+              <a class=" texto nav-link" href="index.html">Meus Livros</a>
             </li>
-            <li class="abas">
-                <a class="texto nav-link" href="perfil.html"> Perfil </a>
+            <li class="abas ">
+                <a class=" texto nav-link atual" href="loja.html">Loja</a>
             </li>
-        </ul>
-    </div>
-
-    <a href="perfil.html">
-      <img class="miniatura-perfil" src="img/evangelionLuis.png" alt="Miniatura Perfil" style="cursor: pointer;">
-  </a>    
-
-</nav>
-
-
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="img/slide1.png" alt="Primeiro slide">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="img/slide2.png" alt="Segundo slide">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="img/slide3.png" alt="Terceiro slide">
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Anterior</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true" alt="Próximo"></span>
-          <span class="sr-only">Próximo</span>
-        </a>
+              <li class="abas">
+                  <a class="texto nav-link" href="carrinho.html">Carrinho</a>
+              </li>
+              <li class="abas">
+                  <a class="texto nav-link" href="perfil.html"> Perfil </a>
+              </li>
+          </ul>
       </div>
 
-      <div class="caixa-pesquisa">
-        <input class="pesquisa" type="text" placeholder="Pesquisar">
-        <img class="img-pesquisa" src="img/search.png" alt="Foto de uma lupa para pesquisa">
-    </div>
+      <a href="perfil.html">
+        <img class="miniatura-perfil" src="img/evangelionLuis.png" alt="Miniatura Perfil" style="cursor: pointer;">
+    </a>    
+
+  </nav>
 
 
-
-    <div class="books-grid">
-        <div class="container">
-            <div class="container-inside">
-                  <!-- As imagens serão adicionadas aqui pelo script -->
-              </div>
-            </div>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="img/slide1.png" alt="Primeiro slide">
         </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/slide2.png" alt="Segundo slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/slide3.png" alt="Terceiro slide">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true" alt="Próximo"></span>
+        <span class="sr-only">Próximo</span>
+      </a>
     </div>
+
+    <div class="caixa-pesquisa">
+      <input class="pesquisa" type="text" placeholder="Pesquisar">
+      <img class="img-pesquisa" src="img/search.png" alt="Foto de uma lupa para pesquisa">
+  </div>
+
+
+
+  <div class="books-grid">
+      <div class="container">
+          <div class="container-inside">
+            <div class="row">
+              <!-- As imagens serão adicionadas aqui pelo script -->
+            </div>
+          </div>
+      </div>
+  </div>
     
+  <script src="js/carrinho.js"></script>
+  <script>printbooks();</script>
 
     <footer class="rodape">
       <p>Copyright &copy; 2022. Todos os direitos reservados.</p>
@@ -125,8 +133,8 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <script src="fotos.js"></script>
     <script src="js/acessibilidade.js"></script>
+    <script src="js/carregador.js"></script>
 
 </body>
 </html>

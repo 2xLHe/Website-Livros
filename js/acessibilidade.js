@@ -56,7 +56,6 @@ function diminuirTamanhos() {
 }
 
 
-document.getElementById('btn-alto-contraste').addEventListener('click', toggleAltoContraste);
 function toggleAltoContraste() {
     document.documentElement.classList.toggle('high-contrast');
 
@@ -129,4 +128,11 @@ function decreaseFontSize() {
 }
 
 
-
+function toggleEspacamentoLetras() {
+    const root = document.querySelector(':root');
+    if (root.classList.contains('espacado')) {
+        root.classList.remove('espacado');
+    } else {
+        root.classList.add('espacado');
+    }
+}

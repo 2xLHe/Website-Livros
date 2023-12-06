@@ -13,17 +13,24 @@
     --small: 1rem;
     --margin: 15vw;
     --font-weight: normal;
+    letter-spacing: normal;
 }
 
 :root.high-contrast {
-    --body-color: gray;
+    --body-color: black;
     --nav-color: #ffffff;
     --select-color: #000000;
     --border-color: #ffffff;
     --texto-color: white;
     --header-color: black;
+    --footer-color:white;
     --bg-color: black;
 }
+
+:root.espacado {
+    letter-spacing: 0.3em;
+}	
+
 
 .texto{
     font-size: var(--medium);
@@ -59,7 +66,22 @@
     .menuInfo {
         flex-direction: column;
     }  
-
+    .barra-acessibilidade{
+        min-height:6vh;
+        width: auto;
+    }
+    .barra-acessibilidade-nav, .barra-acessibilidade-nav-direita{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .botao-acessibilidade{
+        margin-top: 1vh;
+    }
+    .venda{
+        display:flex;
+        flex-direction: column;
+    }
 }
 
 /* Para telas grandes (lg) */
@@ -85,9 +107,8 @@
 .img-fluid {
     width: 90%;
     margin-left: 5%;
-    padding-bottom: 125%; /* 3/4 * 100% */
     margin-bottom: 1%;
-    object-fit: fill;
+    object-fit: cover;
     justify-content: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -154,3 +175,4 @@ nav.mudancas-texto{
     border: none;
     background-color: var(--button-color);
 }
+
